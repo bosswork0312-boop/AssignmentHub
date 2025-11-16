@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="mode-toggle" aria-label="Toggle dark mode">◑</button>
+
+    <div class="auth-wrapper" role="main">
+        <div class="card" aria-labelledby="authTitle">
+            <div class="auth-logo">
+                <div class="logo-mark"></div>
+                <div class="logo-text">
+                    <span class="logo-title">Assignment Hub</span>
+                    <span class="logo-subtitle">Simple assignment manager for students</span>
+                </div>
+            </div>
+
+            <div class="tabs" role="tablist">
+                <button class="tab active" id="loginTab" role="tab" aria-selected="true">
+                    Login
+                </button>
+                <button class="tab" id="registerTab" role="tab" aria-selected="false">
+                    Register
+                </button>
+            </div>
+
+            <form id="loginForm" class="form" aria-label="Login form">
+                <h2 class="title" id="authTitle">Welcome</h2>
+
+                <div class="field-group">
+                    <label for="loginEmail" class="field-label">Email</label>
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="field-group">
+                    <label for="loginPassword" class="field-label">Password</label>
+                    <div class="input-password">
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="loginPassword"
+                            aria-label="Show or hide password"
+                        >○</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn primary full-width">
+                    Login
+                </button>
+
+                <p class="helper-text center">
+                    Don’t have an account?
+                    <button type="button" class="link-button" id="goRegisterLink">
+                        Register
+                    </button>
+                </p>
+            </form>
+
+            <form id="registerForm" class="form hidden" aria-label="Register form">
+                <h2 class="title">Create Account</h2>
+
+                <div class="field-group">
+                    <label for="regName" class="field-label">Full name</label>
+                    <input
+                        type="text"
+                        id="regName"
+                        placeholder="Full name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="field-group">
+                    <label for="regEmail" class="field-label">Email</label>
+                    <input
+                        type="email"
+                        id="regEmail"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="field-group">
+                    <label for="regPassword" class="field-label">Password</label>
+                    <div class="input-password">
+                        <input
+                            type="password"
+                            id="regPassword"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="regPassword"
+                            aria-label="Show or hide password"
+                        >○</button>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label for="regConfirm" class="field-label">Confirm password</label>
+                    <div class="input-password">
+                        <input
+                            type="password"
+                            id="regConfirm"
+                            placeholder="Repeat your password"
+                            autocomplete="new-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="toggle-password"
+                            data-target="regConfirm"
+                            aria-label="Show or hide password"
+                        >○</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn primary full-width">
+                    Create account
+                </button>
+
+                <p class="helper-text center">
+                    Already have an account?
+                    <button type="button" class="link-button" id="goLoginLink">
+                        Login
+                    </button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

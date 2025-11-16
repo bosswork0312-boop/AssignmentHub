@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="mode-toggle" aria-label="Toggle dark mode">◑</button>
+
+    <div class="page-wrapper">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="back-btn" data-go="dashboard.html">←</button>
+                <div>
+                    <div class="breadcrumb" id="courseBreadcrumb">Courses / MDT112</div>
+                    <span class="app-name" id="courseTitle">Web Development Fundamentals</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <span class="pill pill-soft">Semester 1 / 2025</span>
+                <button type="button" class="link-logout" id="logoutBtn">Logout</button>
+            </div>
+        </header>
+
+        <main class="page">
+            <section class="page-header">
+                <div>
+                    <h1 class="page-title">Assignments</h1>
+                    <p class="page-subtitle">
+                        Track all your assignments, deadlines, and submission status.
+                    </p>
+                </div>
+                <div class="page-actions">
+                    <div class="status-legend">
+                        <span class="legend-item">
+                            <span class="status-dot good"></span> On time
+                        </span>
+                        <span class="legend-item">
+                            <span class="status-dot warn"></span> Due soon
+                        </span>
+                        <span class="legend-item">
+                            <span class="status-dot bad"></span> Overdue
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="assignment-list" id="assignmentList"></section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

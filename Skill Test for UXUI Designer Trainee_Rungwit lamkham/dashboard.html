@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="mode-toggle" aria-label="Toggle dark mode">◑</button>
+
+    <div class="page-wrapper">
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="logo-dot"></div>
+                <span class="app-name">Assignment Hub</span>
+            </div>
+            <div class="topbar-right">
+                <span class="topbar-hello" id="userGreeting">Hi, Student</span>
+                <div class="avatar" id="userAvatar">S</div>
+                <button type="button" class="link-logout" id="logoutBtn">Logout</button>
+            </div>
+        </header>
+
+        <main class="page">
+            <nav class="page-subnav">
+                <h1 class="subnav-title">My Courses</h1>
+                <input type="text" class="input-search" placeholder="Search courses…">
+            </nav>
+
+            <section class="subject-grid">
+                <a href="assignments.html" class="subject-card" data-course-code="MDT111">
+                    <div class="subject-tag">MDT111</div>
+                    <h2 class="subject-name">Introduction to Media Technology</h2>
+                    <p class="subject-meta">3 assignments · next due: 18 Nov 2025</p>
+                </a>
+
+                <a href="assignments.html" class="subject-card" data-course-code="MDT112">
+                    <div class="subject-tag">MDT112</div>
+                    <h2 class="subject-name">Web Development Fundamentals</h2>
+                    <p class="subject-meta">3 assignments · next due: 20 Nov 2025</p>
+                </a>
+
+                <a href="assignments.html" class="subject-card" data-course-code="MUX201">
+                    <div class="subject-tag">MUX201</div>
+                    <h2 class="subject-name">User Experience Design</h2>
+                    <p class="subject-meta">3 assignments · next due: 19 Nov 2025</p>
+                </a>
+
+                <div class="subject-card disabled">
+                    <div class="subject-tag">MDG205</div>
+                    <h2 class="subject-name">Motion & Interactive Media</h2>
+                    <p class="subject-meta">No upcoming assignments</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="mode-toggle" aria-label="Toggle dark mode">◑</button>
+
+    <div class="page-wrapper">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="back-btn" data-go="assignments.html">←</button>
+                <div>
+                    <div class="breadcrumb" id="submitBreadcrumb">COURSE / Assignments</div>
+                    <span class="app-name" id="submitTitle">Selected assignment</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <span class="pill pill-soft" id="submitDue">Due: –</span>
+                <button type="button" class="link-logout" id="logoutBtn">Logout</button>
+            </div>
+        </header>
+
+        <main class="page page-split">
+            <section class="submit-main">
+                <h1 class="page-title">Submit your work</h1>
+                <p class="page-subtitle">
+                    Upload your final file and add a short note to your professor.
+                </p>
+
+                <form id="submitForm" class="submit-form">
+                    <div class="field-group">
+                        <label class="field-label" for="submitAssignmentTitle">Assignment title</label>
+                        <input type="text" id="submitAssignmentTitle" value="" readonly>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label" for="submitCourse">Course</label>
+                        <input type="text" id="submitCourse" value="" readonly>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label">Upload file</label>
+                        <div class="file-drop">
+                            <input type="file" id="fileInput" class="file-input" required>
+                            <p class="file-text">
+                                Drop your file here or <span class="underline">browse</span><br>
+                                <span class="file-hint">Accepted: .pdf, .zip, .fig, .png</span><br>
+                                <span id="selectedFileName" class="file-name">ยังไม่ได้เลือกไฟล์</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label class="field-label" for="submitNote">Note to professor (optional)</label>
+                        <textarea id="submitNote" rows="4" placeholder="e.g. This is my final version. I focused on responsive layout and accessibility."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn primary submit-btn">Submit assignment</button>
+                    <p class="helper-text small">
+                        Once submitted, you can update the file before the deadline.
+                    </p>
+                </form>
+            </section>
+
+            <aside class="submit-side">
+                <div class="summary-card">
+                    <h2 class="summary-title">Submission overview</h2>
+                    <ul class="summary-list">
+                        <li>
+                            <span>Current status</span>
+                            <span class="status-badge status-warn" id="submitStatus">Not submitted</span>
+                        </li>
+                        <li>
+                            <span>Time remaining</span>
+                            <span id="timeRemaining">3 days · 12 hours</span>
+                        </li>
+                        <li>
+                            <span>Late policy</span>
+                            <span>-10% per day</span>
+                        </li>
+                    </ul>
+                    <p class="summary-footnote">
+                        Make sure your file name follows the course convention before submitting.
+                    </p>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
